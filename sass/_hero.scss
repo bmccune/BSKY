@@ -1,0 +1,20 @@
+.chaseui-body{
+    clear:both;
+}
+.chaseui-hero-img{
+    break-grid{};
+    min-height:1px;
+    position:absolute;
+    z-index:-1; 
+    img{
+        display:block;
+        max-width:100%;
+        height:auto;
+    }
+}
+.somenewclass{
+    width:100%;
+}
+.chaseui-form-container{
+    background-color:rgba(255,255,255,0.40);
+}

@@ -1,0 +1,249 @@
+//
+// Imports
+// -----------------------------------------------------
+$legacy-support-for-ie: false;
+@import "susy";
+
+$base-font-size : 1em;
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : $base-font-size;
+$grid-padding   : $base-font-size;
+$container-style: magic;
+
+$mobile     : 0em 12 48em;
+$tablet     : 48em 12 62em;
+$mdesktop   : 62em 12 75em;
+$ldesktop   : 75em 12 600em;
+
+$media-layout   : 12 lt-ie9;
+$show-grid-backgrounds  : true;
+//
+// Grid System
+// -----------------------------------------------------
+
+.jpui-container{
+    max-width:73.125em;
+    padding-left:1em;
+    padding-right:1em;
+    
+    margin-left:auto;
+    margin-right:auto;
+    @include susy-grid-background;
+}
+
+.jpui-row{
+
+}
+
+@mixin break-grid(){
+    width:auto;
+    float:none;
+    clear:both;
+    margin-left: - $grid-padding;
+    margin-right: - $grid-padding;
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+    
+}
+
+
+@mixin clear() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+//
+// Large Desktop Grid
+// -----------------------------------------------------
+
+.jpui-col-lg-1{
+    @include span-columns(1,12);
+}
+.jpui-col-lg-2{
+    @include span-columns(2,12);
+}
+.jpui-col-lg-3{
+    @include span-columns(3,12);
+}   
+.jpui-col-lg-4{
+    @include span-columns(4,12);
+}
+.jpui-col-lg-5{
+    @include span-columns(5,12);
+}
+.jpui-col-lg-6{
+    @include span-columns(6,12);
+}
+.jpui-col-lg-7{
+    @include span-columns(7,12);
+}
+.jpui-col-lg-8{
+    @include span-columns(8,12);
+}
+.jpui-col-lg-9{
+    @include span-columns(9,12);
+}
+.jpui-col-lg-10{
+    @include span-columns(10,12);
+}
+.jpui-col-lg-11{
+    @include span-columns(11,12);
+}
+.jpui-col-lg-12{
+    @include span-columns(12,12);
+}
+
+//
+// Medium Desktop Grid
+// -----------------------------------------------------
+
+@include at-breakpoint($mdesktop){
+    .jpui-container{
+        max-width: 60.625em;
+    }
+}
+.jpui-col-md-1{
+    @include span-columns(1,12);
+}
+.jpui-col-md-2{
+    @include span-columns(2,12);
+}
+.jpui-col-md-3{
+    @include span-columns(3,12);
+}   
+.jpui-col-md-4{
+    @include span-columns(4,12);
+}
+.jpui-col-md-5{
+    @include span-columns(5,12);
+}
+.jpui-col-md-6{
+    @include span-columns(6,12);
+}
+.jpui-col-md-7{
+    @include span-columns(7,12);
+}
+.jpui-col-md-8{
+    @include span-columns(8,12);
+}
+.jpui-col-md-9{
+    @include span-columns(9,12);
+}
+.jpui-col-md-10{
+    @include span-columns(10,12);
+}
+.jpui-col-md-11{
+    @include span-columns(11,12);
+}
+.jpui-col-md-12{
+    @include span-columns(12,12);
+}
+
+//
+// Tablet Grid
+// -----------------------------------------------------
+
+@include at-breakpoint($tablet){
+    .jpui-container{
+        max-width: 46.875em;        
+    }
+}
+.jpui-col-sm-1{
+    @include span-columns(1,12);
+}
+.jpui-col-sm-2{
+    @include span-columns(2,12);
+}
+.jpui-col-sm-3{
+    @include span-columns(3,12);
+}   
+.jpui-col-sm-4{
+    @include span-columns(4,12);
+}
+.jpui-col-sm-5{
+    @include span-columns(5,12);
+}
+.jpui-col-sm-6{
+    @include span-columns(6,12);
+}
+.jpui-col-sm-7{
+    @include span-columns(7,12);
+}
+.jpui-col-sm-8{
+    @include span-columns(8,12);
+}
+.jpui-col-sm-9{
+    @include span-columns(9,12);
+}
+.jpui-col-sm-10{
+    @include span-columns(10,12);
+}
+.jpui-col-sm-11{
+    @include span-columns(11,12);
+}
+.jpui-col-sm-12{
+    @include span-columns(12,12);
+}
+
+
+//
+// Mobile Grid
+// -----------------------------------------------------
+
+@include at-breakpoint($mobile){
+    .jpui-container{
+	   max-width:100%;
+    }
+}
+.jpui-col-xs-1{
+    @include span-columns(1,12);
+}
+.jpui-col-xs-2{
+    @include span-columns(2,12);
+}
+.jpui-col-xs-3{
+    @include span-columns(3,12);
+}   
+.jpui-col-xs-4{
+    @include span-columns(4,12);
+}
+.jpui-col-xs-5{
+    @include span-columns(5,12);
+}
+.jpui-col-xs-6{
+    @include span-columns(6,12);
+}
+.jpui-col-xs-7{
+    @include span-columns(7,12);
+}
+.jpui-col-xs-8{
+    @include span-columns(8,12);
+}
+.jpui-col-xs-9{
+    @include span-columns(9,12);
+}
+.jpui-col-xs-10{
+    @include span-columns(10,12);
+}
+.jpui-col-xs-11{
+    @include span-columns(11,12);
+}
+.jpui-col-xs-12{
+    @include span-columns(12,12);
+}
+
+
+
+//
+// Grid Utilities
+// -----------------------------------------------------
+.jpui-col-last{
+    @include omega;
+}
+
+
