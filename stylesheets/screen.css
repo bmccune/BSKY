@@ -801,6 +801,17 @@ table {
   text-align: right;
 }
 
+/* line 5, ../sass/_header.scss */
+.jpui-marketing-header {
+  background-image: url("../img/bar_bg.png");
+  background-color: #cccccc;
+  height: 47px;
+  display: block;
+  clear: both;
+  background-position: right;
+  color: #FFF;
+}
+
 /* line 3, ../sass/_footer.scss */
 .chaseui-footer ul li {
   float: left;
